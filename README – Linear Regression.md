@@ -80,7 +80,46 @@ you will also find:
 * requirements.txt: this is a list of required libraries that were installed upon startup
 * setup.ipynb: This should open up on its own upon start up and you will need to add certain commands to make everything run
 
-#### Step 1: 
+#### Step 1: Explore VDK's Functionalities
+A simple command like that found in the setup.ipynb "!vdk --help" gives you all the information you need.
+
+#### Step 2: Create a Data Job
+Now that we have explored VDK's capabilities, let's create our data job. Keep in mind that we would like to have a sub-folder for the data job,
+so that our Streamlit script is outside of it and in the main directory. Based on the information above, try creating a data job titled "linear-reg-data-job".
+You can chose any team name that you want, but please save create the job at the home directory. This will create a sub-folder for the data job. The home
+directory is /home/jovyan.
+
+Hint: try typing "!vdk create --help" and play around with -n, -t, and -p. If you get really stuck, head all the way down for the answers.
+
+#### Step 3: Work Out the Data Job Template
+Now that you have created a data job, please go inside the folder and set up the structure of your data job. Here's the idea.
+* Let's have one Python script that reads in the data and strips its special characters and re-saves it.
+* Let's have another Python script that reads in the fixed data and performs exploratory data analysis.
+* Let's have a third Python script that reads in the data from the first script and cleans up the data and gets it ready for model building and testing.
+* Lastly, let's have a Python script that reads the data from the third script, builds a simple Linear Regression model, tests it, and saves it.
+
+To do this, let's first get rid of the template SQL script. We won't be needing this for this example. Let's just duplicate the sample Python script
+three times. This way, we'll have four Python scripts. Let's rename them in an alphabetical way so that VDK knows to run them in the order that we want.
+Here's an idea:
+* 10_read_in_data.py
+* 20_explore_data.py
+* 30_process_data.py
+* 40_build_model.py
+* 
+
+
+### Workshop Answers
+#### Step 1
+``
+!vdk --help
+``
+#### Step 2
+``
+!vdk create --help
+!vdk create -n linear-reg-data-job -t team-awesome -p /home/jovyan
+``
+
+
 
 
 ### VDK
