@@ -73,6 +73,16 @@ We will cover:
 * https://www.youtube.com/watch?v=Klqn--Mu2pE
 * https://medium.com/codex/step-by-step-guide-to-simple-and-multiple-linear-regression-in-python-867ac9a30298
 
+### Workshop Steps
+Now that you have opened up the MyBinder environment and are reading this, you are already on the right track! Inside this environment,
+you will also find:
+* README.md: no need to worry about this for now
+* requirements.txt: this is a list of required libraries that were installed upon startup
+* setup.ipynb: This should open up on its own upon start up and you will need to add certain commands to make everything run
+
+#### Step 1: 
+
+
 ### VDK
 Versatile Data Kit feature allows you to implement automated pull ingestion and batch data processing.
 
@@ -105,9 +115,3 @@ Run the command below and follow its instructions (you can see its options with 
 ```python
 vdk deploy
 ```
-
-### MyBinder Environment
-A quick note to add the following to the MyBinder environment requirements.txt file for smooth running:
-seaborn
-matplotlib
-sklearn
