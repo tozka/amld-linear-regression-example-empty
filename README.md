@@ -159,7 +159,7 @@ Through this scenario, you created a data job, which:
 
 Congrats!
 
-### Authored By
+## Authored By
 Alexander Avramov
 
 Data Analyst at VMware Sofia
