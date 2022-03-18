@@ -15,8 +15,8 @@ st.write("How Did Our Model Perform?")
 
 # some definitions...
 os.chdir(pathlib.Path(__file__).parent.absolute())
-actual_vs_pred_loc = 'linear-reg-data-job/model/actual_vs_model_predicted_battery_drain_test.csv'
-model_loc = 'linear-reg-data-job/' # <- !!! ENTER THE LOCATION OF THE MODEL !!!
+actual_vs_pred_loc = '' # <- !!! ENTER THE LOCATION OF THE ACTUAL VS PREDICTED DATA !!!
+model_loc = '' # <- !!! ENTER THE LOCATION OF THE MODEL !!!
 
 # reading in the actual versus predicted data set...
 actual_vs_pred = pd.read_csv(actual_vs_pred_loc, usecols=range(1, 3))
