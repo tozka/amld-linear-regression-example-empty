@@ -7,7 +7,7 @@ import streamlit as st
 from parameters import parameters
 
 # setting up the title of the page...
-st.title('') # <- !!! ENTER A TITLE FOR YOUR PAGE HERE !!!
+st.title('Electric Cars and Battery Drain Linear Regression Example')
 
 # setting up the sub-header for the first part of the page...
 st.header("Our Simple Model's Accuracy")
@@ -58,9 +58,8 @@ if estimate > results['charge_level_start']:
     estimate = results['charge_level_start']
     st.metric("Your Estimated Battery Drainage (in Percent) Is:", estimate)
     st.write("Note: The Model's Estimate Exceeds the Starting Level Charge; Thus Estimate is Capped")
-# !!! FILL IN THE CODE BELOW TO ADD A STATEMENT TO MAKE THE ESTIMATE EQUAL 0 IF IT IS BELOW 0 !!!
-elif estimate < # <- !!! ENTER VALUE HERE !!! :
-    estimate = # <- !!! ENTER VALUE HERE !!!
+elif estimate < 0:
+    estimate = 0
     st.metric("Your Estimated Battery Drainage (in Percent) Is:", estimate)
 else:
     st.metric("Your Estimated Battery Drainage (in Percent) Is:", estimate)
